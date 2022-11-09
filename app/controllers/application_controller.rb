@@ -7,4 +7,33 @@ class ApplicationController < Sinatra::Base
     notes.to_json(include: :categories)
   end
 
+  get '/categories' do
+    category = Category.all
+    category.to_json
+  end
+
+  post '/notes' do
+    notes = Note.create(
+      category: params[:category],
+      note: params[:note]
+    )
+    notes.to_json
+  end
+
+  patch '/notes/:id' do
+    notes = Note.find(params[:id])
+    notes.updates(
+      note: params[:note]
+    )
+    notes.to_json
+
+  end
+
+  delete '/note/:id' do
+    notes = Note.find(params[:id])
+    notes.destroy
+    notes.to_json
+  end
+
+
 end
