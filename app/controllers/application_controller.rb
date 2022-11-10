@@ -4,7 +4,7 @@ class ApplicationController < Sinatra::Base
   # Add your routes here
   get '/notes' do
     notes = Note.all
-    notes.to_json(include: :categories)
+    notes.to_json
   end
 
   get '/categories' do
