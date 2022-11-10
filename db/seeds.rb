@@ -1,20 +1,9 @@
+User.destroy_all
+Category.destroy_all
+Note.destroy_all
 puts "🌱 Seeding spices..."
-
-# Seed your database here
-# Make 10 users
-10.times do
-    User.create(name: Faker::Name.name, email: Faker::Internet.email)
-  end
-  
-  # Make 50 Notess
-#   50.times do
-#     # create a Note with random data
-#      Note.create(
-#       title: Faker::Note.title,
-#       category: Faker::Note.category,
-#     )
-# end
-    # create between 1 and 5 reviews for each Note
-      # get a random user for every review
+user1 = User.create(name:"david", email:"rinkanya@gmail.com")
+note1 = Note.create(note:"start working", user_id:1,category_id:1)
+category1 = Category.create(category:"work", user_id:user1.id, note_id:note1.id)
 
 puts "✅ Done seeding!"
