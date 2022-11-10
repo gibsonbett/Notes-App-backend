@@ -14,22 +14,23 @@ class ApplicationController < Sinatra::Base
 
   post '/notes' do
     notes = Note.create(
-      category: params[:category],
-      note: params[:note]
+      note: params[:note],
+      category_id: params[:category_id],
+      user_id: params[:user_id]
     )
     notes.to_json
   end
 
   patch '/notes/:id' do
     notes = Note.find(params[:id])
-    notes.updates(
+    notes.update(
       note: params[:note]
     )
     notes.to_json
 
   end
 
-  delete '/note/:id' do
+  delete '/notes/:id' do
     notes = Note.find(params[:id])
     notes.destroy
     notes.to_json
