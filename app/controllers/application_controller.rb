@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
 
   get '/categories' do
     category = Category.all
-    category.to_json
+    category.to_json(include: :notes)
   end
 
   post '/notes' do
