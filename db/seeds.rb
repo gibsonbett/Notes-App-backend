@@ -1,6 +1,4 @@
-User.destroy_all
-Category.destroy_all
-Note.destroy_all
+
 puts "🌱 Seeding spices..."
 user1 = User.create(name:"david", email:"rinkanya@gmail.com")
 note1 = Note.create(note:"start working", user_id:1,category_id:1)
