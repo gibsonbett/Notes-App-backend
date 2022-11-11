@@ -3,7 +3,7 @@
 # Note.destroy_all
 puts "🌱 Seeding spices..."
 user1 = User.create(name:"david", email:"rinkanya@gmail.com")
-note1 = Note.create(todos:"start working", user_id:1, category_id:1)
-category1 = Category.create(cat:"work", user_id:user1.id, note_id:note1.id)
+category1 = Category.create(cat:"work", user_id:user1.id)
+note1 = Note.create(todos:"start working", category_id:category1.id )
 
 puts "✅ Done seeding!"
