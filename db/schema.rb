@@ -12,14 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2022_11_09_082429) do
 
-  create_table "categories", force: :cascade do |t|
-    t.string "cat"
-    t.integer "user_id"
-  end
-
   create_table "notes", force: :cascade do |t|
+    t.string "category"
     t.string "todos"
-    t.integer "category_id"
     t.integer "user_id"
   end
 
