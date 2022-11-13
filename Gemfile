@@ -34,6 +34,11 @@ gem "sqlite3", "~> 1.4"
 # Require all files in a folder
 gem "require_all", "~> 3.0"
 
+# allows you to encrypt users password
+
+gem "bcrypt"
+gem "sinatra-flash"
+
 # These gems will only be used when we are running the application locally
 group :development do
   gem "pry", "~> 0.14.1"
