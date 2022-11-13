@@ -13,20 +13,20 @@
 ActiveRecord::Schema.define(version: 2022_11_09_082429) do
 
   create_table "categories", force: :cascade do |t|
-    t.string "category"
+    t.string "cat"
     t.integer "user_id"
-    t.integer "note_id"
   end
 
   create_table "notes", force: :cascade do |t|
-    t.string "note"
+    t.string "todos"
     t.integer "category_id"
     t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "username"
     t.string "email"
+    t.string "password_digest"
   end
 
 end
