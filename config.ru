@@ -13,3 +13,9 @@ use Rack::JSONBodyParser
 
 # Our application
 run ApplicationController
+
+use NotesController
+use CategoriesController
+use SessionsController
+use UsersController
+run ApplicationController
