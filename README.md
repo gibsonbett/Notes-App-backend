@@ -22,36 +22,6 @@ by a separate **React frontend** that interacts with the database via the API.
 
 ## Requirements
 
-For this project, we will:
-
-- Use Active Record to interact with a database.
-- Have at least two models with a one-to-many relationship.
-- At a minimum, set up the following API routes in Sinatra:
-  - create and read actions for both models
-  - full CRUD capability for one of the models
-- Build a separate React frontend application that interacts with the API to
-  perform CRUD actions.
-- Implement proper front end state management. We will be updating state using a
-  setState function after receiving your response from a POST, PATCH, or DELETE 
-  request. We will NOT be relying on a GET request to update state. 
-- Use good OO design patterns. We will have separate classes for each of our
-  models, and create instance and class methods as necessary. 
-- Routes in our application (both client side and back end) should follow RESTful
-  conventions.
-- Use our back end optimally. Pass JSON for related associations to the front 
-  end from the back end. We will use active record methods in our controller to grab the needed data from our database and provide as JSON to the front end. We will NOT be relying on filtering front end state or a separate fetch request to
-  retrieve related data.
-
-In this application,we will build a notes application with a React frontend interface and a Sinatra backend API, where a user can:
-
-- **Create** a new note
-- **Read** a list of all notes
-- **Update** individual notes
-- **Delete** notes
-
-A `Note` can be tagged with a `Category`, so that each note _belongs to_ a
-category and each category _has many_ notes.
-
 ## License
 
 MIT License
